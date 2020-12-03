@@ -28,7 +28,7 @@ export class Tab2Page {
           label: 'IMC',
           data: valores,
           backgroundColor: 'rgb(0, 0, 0)', // array should have same number of elements as number of dataset
-          borderColor: 'rgb(38, 194, 129)',// array should have same number of elements as number of dataset
+          borderColor: 'rgb(38, 194, 129)', // array should have same number of elements as number of dataset
           borderWidth: 1
         }]
       },
