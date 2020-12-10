@@ -3,7 +3,7 @@
         <ion-buttons slot="start">
             <ion-back-button></ion-back-button>
         </ion-buttons>
-        <ion-title>Log In</ion-title>
+        <ion-title>register</ion-title>
     </ion-toolbar>
 </ion-header>
 
@@ -36,9 +36,8 @@
 
         <ion-row>
             <ion-col>
-                <ion-button (click)="Login()" type="submit" color="danger" expand="block" [disabled]="!formulario.valid">Sign In</ion-button>
-                <a style="display: inline; float: left;" [routerLink]="['/forgot-password']" class="small-text">Forgot Password?</a>
-                <a style="display: inline; float: left; margin-left: 2%" [routerLink]="['/register']" class="small-text">Registrar</a>
+                <ion-button (click)="signUp()" type="submit" color="danger" expand="block" [disabled]="!formulario.valid">Sign In</ion-button>
+                <a [routerLink]="['/login']" class="small-text">Login</a>
             </ion-col>
         </ion-row>
     </form>
