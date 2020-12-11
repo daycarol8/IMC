@@ -15,5 +15,4 @@ export class AuthenticationService {
   SignIn(email: string, password: string) {
     return this.angularFire.signInWithEmailAndPassword(email, password);
   }
-  
 }

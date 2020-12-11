@@ -29,7 +29,7 @@ export class LoginPage implements OnInit {
   Login(){
     this.authService.SignIn(this.formulario.get('email').value, this.formulario.get('password').value)
     .then(async (res) => {
-      this.router.navigate(['home']);
+      this.router.navigate(['tabs/tab1']);
       const toast = await this.toastController.create({
         message: 'Login bem sucedido',
         duration: 5000

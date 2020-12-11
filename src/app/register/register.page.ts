@@ -15,12 +15,16 @@ export class RegisterPage implements OnInit {
   constructor(private router: Router, private formBuilder: FormBuilder, public authService: AuthenticationService) { }
 
   ngOnInit() {
+    this.formulario = this.formBuilder.group({
+      email: ['', [Validators.required, Validators.email]],
+      password: ['', [Validators.required, Validators.minLength(1)]],
+    });
   }
 
   signUp(){
     this.authService.RegisterUser(this.formulario.get('email').value, this.formulario.get('password').value)
     .then((res) => {
-      this.router.navigate(['home']);
+      this.router.navigate(['tabs/tab1']);
     }).catch((error) => {
       window.alert(error.message);
     });
